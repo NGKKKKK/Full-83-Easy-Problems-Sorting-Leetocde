@@ -1,0 +1,21 @@
+
+import java.util.Arrays;
+
+
+// 2706. Buy Two Chocolates
+
+public class bai2706 {
+
+    //Solution
+    class Solution {
+        public int buyChoco(int[] prices, int money) {
+            
+            Arrays.sort(prices);
+            
+            if (prices[0] + prices[1] > money) return money;
+            
+            return (money - prices[0] - prices[1]);
+            
+        }
+    }
+}
